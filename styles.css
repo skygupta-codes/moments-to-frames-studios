@@ -535,11 +535,61 @@ p {
     user-select: none;
 }
 
+/* Statement Section */
+.statement {
+    padding: 8rem 0;
+}
+
+.statement-subtitle {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #d8d8d8;
+    margin-bottom: 2rem;
+}
+
+.statement-title {
+    font-family: var(--font-serif);
+    font-size: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.statement-tags {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #999999;
+    margin-bottom: 3.5rem;
+}
+
+.btn-solid-white {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--color-white);
+    transition: var(--transition-fast);
+}
+
+.btn-solid-white:hover {
+    background-color: transparent;
+    color: var(--color-white);
+}
+
 /* About Centered Section */
 .about-centered {
     max-width: 900px;
     margin: 0 auto;
-    padding: var(--spacing-xl) 0;
+    padding: 5rem 0 2rem 0;
 }
 
 .about-centered .section-title {

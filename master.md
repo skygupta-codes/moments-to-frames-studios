@@ -39,14 +39,19 @@ The website must closely mimic the premium structure, layout, and luxurious aest
 - A full-screen horizontal ticker/slider showing three portrait-oriented photos touching edge-to-edge.
 - Uses native JavaScript to infinitely append/prepend to a flex-track, resulting in a smooth, continuous slide from right to left.
 
-**3. About Section:**
-- A simple, elegant, full-width centered text layout set below the Hero slider. Focuses on luxurious serif typography (with line breaks) to introduce the "Moments to Frames Studio" philosophy without any accompanying images.
+**3. Statement Section:**
+- A stark, dark-mode (`bg-black`) full-width section directly underneath the hero slider (no gap). 
+- Features a small italicized serif subtitle, a large elegant serif main title ("OTTAWA MATERNITY & FAMILY PHOTOGRAPHY STUDIO"), heavily tracked small sans-serif tags below it, and a "WORK WITH US" outline button.
+
+**4. About Section:**
+- A simple, elegant, full-width centered text layout set below the dark Statement Section. 
+- **Important Connection:** This section must have its background color match the Services section (`bg-white`) and have reduced top/bottom padding so it seamlessly integrates and flows into the photo grid below it without a harsh break.
 - Use the following specific copy (2 paragraphs):
   * "Moments to Frames Studio is a boutique maternity and family photography studio located in Barrhaven, Ottawa. We offer more than portrait photography—we provide a thoughtfully curated experience designed to celebrate the magic of the wait and the beauty of timeless family bonds. From personalized styling guidance to gentle, natural posing, every detail is intentionally crafted to help you feel confident, radiant, and connected during this meaningful season."
   * "Our studio proudly serves families across Barrhaven, Nepean, Kanata, Manotick, and throughout Ottawa. Many of our maternity and family portrait clients also travel from surrounding communities across the region to document their most cherished milestones with us."
 - **Styling Note:** Ensure the body text font size is considerably small and delicate (e.g., `0.9rem`) with a generous line height (e.g., `2.2`) to match the refined aesthetic of the Belle Mère reference.
 
-**4. Services Highlight:**
+**5. Services Highlight:**
 - A responsive 2-column aesthetic layout highlighting "Maternity Portraits" and "Family Portraits".
 - Each card should include "FROM $300" pricing and an interactive "LEARN MORE" button.
 - Use JavaScript to create an expanding/collapsing accordion toggle for the Learn More button, revealing detailed session bullet points smoothly without cluttering the initial view.
