@@ -39,8 +39,8 @@ The website must closely mimic the premium structure, layout, and luxurious aest
 - A full-screen horizontal ticker/slider showing three portrait-oriented photos touching edge-to-edge.
 - Uses native JavaScript to infinitely append/prepend to a flex-track, resulting in a smooth, continuous slide from right to left.
 
-**3. Welcome Section:**
-- Simple, elegant centering with a subtle gray divider. Focuses on luxurious serif typography to introduce the studio philosophy.
+**3. About Section:**
+- A simple, elegant, full-width centered text layout set below the Hero slider. Focuses on luxurious serif typography (with line breaks) to introduce the "Moments to Frames Studio" philosophy without any accompanying images.
 
 **4. Services Highlight:**
 - A responsive 2-column aesthetic layout highlighting "Maternity Portraits" and "Family Portraits".
@@ -52,18 +52,15 @@ The website must closely mimic the premium structure, layout, and luxurious aest
 - Uses JavaScript to smoothly fade between an array of 5 testimonials every 5 seconds. 
 - Must include small left/right navigational arrows and an indicator (e.g., "1/5"). Manual interaction must pause/reset the auto-slide timer.
 
-**6. About Section:**
-- A 50/50 split layout. Left side: Text introducing "Akash" and his photographic journey. Right side: A large, 4:5 aspect ratio portrait (`images/akash.jpg`). Add a CSS grayscale filter (`filter: grayscale(100%)`) to the portrait to maintain the black and white aesthetic.
-
-**7. Location Section:**
+**6. Location Section:**
 - A responsive Google Maps `<iframe>` set to 100% width, centering on "K2G 7A2". 
 - Beneath the map, use CSS flexbox to align "OUR LOCATION" to the left, and the physical address ("OTTAWA, ONTARIO | K2G 7A2") beautifully justified to the right.
 
-**8. Instagram Grid & CTA:**
+**7. Instagram Grid & CTA:**
 - A touching edge-to-edge 5-image horizontal row showcasing recent work.
 - An "INQUIRE NOW" call-to-action button linking directly to the studio's Honeybook widget.
 
-**9. Universal Footer & Sticky Element:**
+**8. Universal Footer & Sticky Element:**
 - **Footer:** Deep black background with white text. Includes redundant navigation links, the studio logo, the address, and the contact email: `INFO@MOMENTSTOFRAMES.COM`. Social "INSTAGRAM" link must route to `https://instagram.com/momentstoframesstudio`.
 - **Sticky CTA:** A small, aesthetically pleasing "BOOK NOW" button fixed to the bottom-right corner of the viewport permanently, linking to Honeybook. 
 
