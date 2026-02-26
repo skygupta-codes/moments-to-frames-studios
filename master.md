@@ -93,3 +93,4 @@ The website must closely mimic the premium structure, layout, and luxurious aest
 - Ensure all external links (Instagram, Honeybook) use `target="_blank" rel="noopener noreferrer"`.
 - Use CSS transitions (e.g., `transition: 0.3s ease;`) globally for hover states across all buttons and anchor tags to create a luxurious interaction feel.
 - Images should feature subtle zoom-on-hover effects (`transform: scale(1.02);`) inside the portfolio cascades to promote interactivity.
+- **Analytics:** The provided Meta/Facebook Pixel tracking script (Pixel ID: `1878810592763063`) must be injected into the `<head>` tag of **every single HTML page** to track page views and conversions.
