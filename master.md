@@ -53,10 +53,11 @@ The website must closely mimic the premium structure, layout, and luxurious aest
 
 **5. Services Highlight:**
 - A responsive 2-column aesthetic layout highlighting "Maternity Portraits" and "Family Portraits".
+- Use `images/maternity-service.jpg` for the Maternity feature, and `images/family.png` for the Family feature.
 - Each card should include "FROM $300" pricing and an interactive "LEARN MORE" button.
 - Use JavaScript to create an expanding/collapsing accordion toggle for the Learn More button, revealing detailed session bullet points smoothly without cluttering the initial view.
 
-**5. Testimonial Slider:**
+**6. Testimonial Slider:**
 - A minimal text-only block featuring an italicized serif quote from a client.
 - Uses JavaScript to smoothly fade between an array of 5 testimonials every 5 seconds. 
 - Must include small left/right navigational arrows and an indicator (e.g., "1/5"). Manual interaction must pause/reset the auto-slide timer.
