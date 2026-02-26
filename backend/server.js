@@ -6,7 +6,14 @@ const { GoogleGenAI } = require('@google/genai');
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+// Configure CORS to allow the frontend explicitly
+const corsOptions = {
+    origin: ['https://momentstoframesstudio.com', 'https://www.momentstoframesstudio.com', 'http://localhost:8080', 'http://127.0.0.1:8080'],
+    methods: 'POST,GET',
+    optionsSuccessStatus: 200
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Initialize Gemini Instance
