@@ -41,6 +41,10 @@ The website must closely mimic the premium structure, layout, and luxurious aest
 
 **3. About Section:**
 - A simple, elegant, full-width centered text layout set below the Hero slider. Focuses on luxurious serif typography (with line breaks) to introduce the "Moments to Frames Studio" philosophy without any accompanying images.
+- Use the following specific copy (2 paragraphs):
+  * "Moments to Frames Studio is a boutique maternity and family photography studio located in Barrhaven, Ottawa. We offer more than portrait photography—we provide a thoughtfully curated experience designed to celebrate the magic of the wait and the beauty of timeless family bonds. From personalized styling guidance to gentle, natural posing, every detail is intentionally crafted to help you feel confident, radiant, and connected during this meaningful season."
+  * "Our studio proudly serves families across Barrhaven, Nepean, Kanata, Manotick, and throughout Ottawa. Many of our maternity and family portrait clients also travel from surrounding communities across the region to document their most cherished milestones with us."
+- **Styling Note:** Ensure the body text font size is considerably small and delicate (e.g., `0.9rem`) with a generous line height (e.g., `2.2`) to match the refined aesthetic of the Belle Mère reference.
 
 **4. Services Highlight:**
 - A responsive 2-column aesthetic layout highlighting "Maternity Portraits" and "Family Portraits".
