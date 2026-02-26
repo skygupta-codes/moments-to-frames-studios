@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
 const { GoogleGenAI } = require('@google/genai');
@@ -15,6 +16,9 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(express.json());
+
+// Serve static frontend files from the "public" directory
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Initialize Gemini Instance
 const ai = new GoogleGenAI({

@@ -197,8 +197,8 @@
             messagesContainer.appendChild(msgDiv);
             scrollToBottom();
 
-            // Call the live native Hostinger backend
-            const response = await fetch('https://api.momentstoframesstudio.com/api/chat', {
+            // Call the same-origin backend API
+            const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
