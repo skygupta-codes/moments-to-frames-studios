@@ -197,8 +197,8 @@
             messagesContainer.appendChild(msgDiv);
             scrollToBottom();
 
-            // Call the local backend
-            const response = await fetch('http://localhost:3000/api/chat', {
+            // Call the live Render backend
+            const response = await fetch('https://maya-backend-rzv0.onrender.com/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
