@@ -20,10 +20,20 @@ app.use(express.json());
 // Serve static frontend files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Initialize Gemini Instance
-const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY,
-});
+// Safely initialize Gemini Instance so it doesn't crash on boot if Env Var is missing on Hostinger
+let ai = null;
+try {
+    if (process.env.GEMINI_API_KEY) {
+        ai = new GoogleGenAI({
+            apiKey: process.env.GEMINI_API_KEY,
+        });
+        console.log("Gemini API initialized successfully.");
+    } else {
+        console.warn("WARNING: GEMINI_API_KEY is missing. Chatbot will return 500 errors.");
+    }
+} catch (err) {
+    console.error("Failed to initialize Gemini API on boot:", err.message);
+}
 
 // System Prompt based on chatinstruction.md rules
 const SYSTEM_PROMPT = `
@@ -78,6 +88,11 @@ IMPORTANT: When the user asks about booking, availability, or pricing, you MUST 
 
 app.post('/api/chat', async (req, res) => {
     try {
+        if (!ai) {
+            console.error("Chat API called but Gemini AI is not initialized (missing API key).");
+            return res.status(500).json({ error: "Chatbot is temporarily offline. Please contact the studio directly." });
+        }
+
         const { message, conversationHistory = [] } = req.body;
 
         if (!message) {
