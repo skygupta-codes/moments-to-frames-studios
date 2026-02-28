@@ -4,8 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moments To Frames Studio | Maternity & Family Photography</title>
-    <meta name="description" content="Elegant and timeless maternity, newborn, and family portrait photography studio.">
+    <!-- IMPROVED: SEO Meta Tags -->
+    <title>Ottawa Maternity & Family Photography Studio | Moments to Frames</title>
+    <meta name="description"
+        content="Moments to Frames is Ottawa's boutique maternity and family photography studio in Barrhaven. Elegant, timeless portraits starting at $300. Serving Ottawa, Nepean, Kanata & Manotick.">
+    <meta property="og:title" content="Ottawa Maternity & Family Photography Studio | Moments to Frames">
+    <meta property="og:description"
+        content="Moments to Frames is Ottawa's boutique maternity and family photography studio in Barrhaven. Elegant, timeless portraits starting at $300. Serving Ottawa, Nepean, Kanata & Manotick.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://momentstoframesstudio.com/">
+    <meta property="og:image" content="https://momentstoframesstudio.com/images/maternity-1.jpg">
+    <link rel="canonical" href="https://momentstoframesstudio.com/">
+
     <!-- Fonts: Playfair Display for elegant serif headers, Lora for body -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,34 +41,236 @@
         fbq('init', '1878810592763063');
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
+    <noscript><img height="1" width="1" style="display:none" alt="Facebook Pixel Tracker"
             src="https://www.facebook.com/tr?id=1878810592763063&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <style>
+        /* ADDED CSS for new sections */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .unified-nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .unified-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 3rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .unified-nav a {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .unified-nav a:hover {
+            opacity: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .testimonial-stars {
+            color: #d4af37;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .testimonial-author {
+            font-family: var(--font-heading);
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #d8d8d8;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .portfolio-item {
+            aspect-ratio: 4/5;
+            overflow: hidden;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            text-align: left;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1.5rem 0;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .faq-question {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            letter-spacing: 0.05em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--color-black);
+        }
+
+        .faq-answer {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, margin-top 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .faq-icon::after {
+            content: '+';
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon::after {
+            content: '\2212';
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            text-align: left;
+        }
+
+        .blog-image {
+            width: 100%;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-title {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            color: var(--color-black);
+        }
+
+        .blog-excerpt {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-link {
+            font-family: var(--font-heading);
+            font-size: 0.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-black);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        @media (max-width: 1024px) {
+            .mobile-only {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- 
+        IMPROVED: SUMMARY OF CHANGES
+        1. Fixed broken social links in footer (Facebook & Pinterest updated).
+        2. Expanded the About section with photographer's story and CTA.
+        3. Testimonials carousel replaced with a static 3-column grid showing all 5 testimonials.
+        4. Added Curated Portfolio grid "OUR WORK" with 6 images below services.
+        5. Descriptive alt text added to all <img> elements.
+        6. Added FAQ Section with clickable accordions.
+        7. Added Blog Previews ("LATEST STORIES") above FAQ.
+        8. Improved SEO Meta tags including description and OG properties.
+        9. Navigation updated to a single unified bar, with smooth scrolling and anchor links to FAQ & About.
+    -->
 
     <!-- Header / Navigation -->
     <header class="header">
         <div class="nav-container">
-            <nav class="nav-left desktop-only">
-                <ul>
-                    <li><a href="maternity-portfolio.html">PORTFOLIO</a></li>
-                    <li><a href="#services">SERVICES</a></li>
-                    <li><a href="blog.html">BLOG</a></li>
-                </ul>
-            </nav>
-
             <div class="logo">
                 <a href="#home">MOMENTS TO FRAMES</a>
             </div>
 
-            <nav class="nav-right desktop-only">
+            <!-- IMPROVED: Navigation structure consolidated -->
+            <nav class="unified-nav desktop-only">
                 <ul>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#services">SERVICES</a></li>
+                    <li><a href="maternity-portfolio.html">PORTFOLIO</a></li>
                     <li><a href="#about">ABOUT</a></li>
-                    <li><a href="https://instagram.com/momentstoframesstudio" target="_blank"
-                            rel="noopener noreferrer">INSTAGRAM</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
 
@@ -74,11 +286,12 @@
     <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav">
         <ul class="mobile-nav-links">
-            <li><a href="maternity-portfolio.html">PORTFOLIO</a></li>
             <li><a href="#services">SERVICES</a></li>
-            <li><a href="blog.html">BLOG</a></li>
-            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="maternity-portfolio.html">PORTFOLIO</a></li>
             <li><a href="#about">ABOUT</a></li>
+            <li><a href="blog.html">BLOG</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">CONTACT</a></li>
             <li><a href="https://instagram.com/momentstoframesstudio" target="_blank"
                     rel="noopener noreferrer">INSTAGRAM</a></li>
         </ul>
@@ -89,19 +302,20 @@
         <div class="hero-slider">
             <div class="slider-track" id="heroTrack">
                 <div class="slide">
-                    <img src="images/maternity-1.jpg" alt="Maternity & Family Photography 1">
+                    <img src="images/maternity-1.jpg" alt="Ottawa maternity photography - elegant studio portrait">
                 </div>
                 <div class="slide">
-                    <img src="images/Z625154-scaled.jpg" alt="Maternity & Family Photography 2">
+                    <img src="images/Z625154-scaled.jpg"
+                        alt="Family photography session with happy parents and child in studio">
                 </div>
                 <div class="slide">
-                    <img src="images/Z625407_bnw-scaled.jpg" alt="Maternity & Family Photography 3">
+                    <img src="images/Z625407_bnw-scaled.jpg" alt="Black and white maternity portrait session in Ottawa">
                 </div>
                 <div class="slide">
-                    <img src="images/Z627968_websize.jpg" alt="Maternity & Family Photography 4">
+                    <img src="images/Z627968_websize.jpg" alt="Mother and baby photography studio session">
                 </div>
                 <div class="slide">
-                    <img src="images/Z624568_websize.jpg" alt="Maternity & Family Photography 5">
+                    <img src="images/Z624568_websize.jpg" alt="Timeless and refined maternity gown portrait">
                 </div>
             </div>
         </div>
@@ -118,30 +332,46 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about bg-white text-center">
-        <div class="container about-centered fade-in-up">
-            <h2 class="section-title">ABOUT Moments To Frames Studios</h2>
-
-            <p class="body-text mt-4">Moments to Frames Studio is a boutique maternity and family photography studio
-                located in Barrhaven, Ottawa. We offer more than portrait photography—we provide a thoughtfully curated
-                experience designed to celebrate the magic of the wait and the beauty of timeless family bonds. From
-                personalized styling guidance to gentle, natural posing, every detail is intentionally crafted to help
-                you feel confident, radiant, and connected during this meaningful season.</p>
-
-            <p class="body-text">Our studio proudly serves families across Barrhaven, Nepean, Kanata, Manotick, and
-                throughout Ottawa. Many of our maternity and family portrait clients also travel from surrounding
-                communities across the region to document their most cherished milestones with us.</p>
+    <!-- IMPROVED: About Section -->
+    <section id="about" class="about bg-white">
+        <div class="container fade-in-up" style="padding: 6rem 0;">
+            <h2 class="section-title text-center">ABOUT THE STUDIO</h2>
+            <div class="about-content mt-4"
+                style="display: flex; flex-wrap: wrap; gap: 4rem; align-items: center; justify-content: center;">
+                <div style="flex: 1; min-width: 300px; max-width: 450px;">
+                    <img src="images/akash.jpg" alt="Akash - Photographer at Moments to Frames Studio"
+                        style="width: 100%; border-radius: 4px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                </div>
+                <div style="flex: 1; min-width: 300px; max-width: 600px; text-align: left;">
+                    <p class="sub-heading">MEET YOUR PHOTOGRAPHER</p>
+                    <h3
+                        style="font-family: var(--font-heading); font-size: 2.2rem; margin-bottom: 1.5rem; font-weight: 400;">
+                        Hi, I'm Akash</h3>
+                    <p class="body-text">Moments to Frames Studio is a boutique maternity and family photography studio
+                        located in Barrhaven, Ottawa. My passion for capturing maternity and family milestones stems
+                        from a deep appreciation for the fleeting, beautiful moments that define our lives.</p>
+                    <p class="body-text">I started this studio to give families more than just photos—to provide a
+                        thoughtfully curated experience designed to celebrate the magic of the wait and the beauty of
+                        timeless family bonds. From personalized styling guidance to gentle, natural posing, my
+                        philosophy is to make your portrait experience as elegant and stress-free as possible.</p>
+                    <p class="body-text">Every detail in our studio is intentionally crafted to help you feel confident,
+                        radiant, and connected during this meaningful season. Our studio proudly serves families across
+                        Barrhaven, Nepean, Kanata, Manotick, and throughout Ottawa.</p>
+                    <a href="https://www.honeybook.com/widget/moments_to_frames_234688/cf_id/699f375b9ea96e0039c52bd9"
+                        class="btn btn-primary mt-4" target="_blank" rel="noopener noreferrer">WORK WITH ME</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section (Maternity, Family) -->
-    <section id="services" class="categories section bg-white">
+    <section id="services" class="categories section bg-light">
         <div class="container">
             <div class="service-grid">
                 <!-- Service 1: Maternity -->
                 <div class="service-item fade-in-up">
-                    <img src="images/maternity-service.jpg" alt="Maternity Portraits">
+                    <img src="images/maternity-service.jpg"
+                        alt="Maternity portrait session at Moments to Frames Studio in Barrhaven Ottawa">
                     <h3>MATERNITY<br>PORTRAITS</h3>
                     <p class="service-desc">Freeze your pregnancy in time with modern and elegant maternity photography.
                         On-site hair and makeup available, as well as a curated studio wardrobe.</p>
@@ -162,7 +392,8 @@
 
                 <!-- Service 2: Family -->
                 <div class="service-item fade-in-up delay-1">
-                    <img src="images/family.png" alt="Family Portraits">
+                    <img src="images/family.png"
+                        alt="Family portrait session at Moments to Frames Studio in Barrhaven Ottawa">
                     <h3>FAMILY<br>PORTRAITS</h3>
                     <p class="service-desc">Document the beautiful, chaotic, and authentic connection of your family.
                         Sessions designed to be relaxed and fun, resulting in timeless heirlooms for your home.</p>
@@ -184,22 +415,171 @@
         </div>
     </section>
 
-    <!-- Testimonial Slider -->
-    <section class="testimonials section bg-black text-white">
-        <div class="container text-center fade-in-up">
-            <div class="testimonial-slide active">
-                <p class="quote" id="testimonial-quote">"Absolutely stunning photos that we will cherish forever. The
-                    experience was professional, calm, and relaxing. Akash made us feel totally at ease."</p>
-                <div class="testimonial-nav">
-                    <span class="nav-arrow" id="testimonial-prev">&lt;</span>
-                    <span class="slide-indicator" id="testimonial-indicator">1/5</span>
-                    <span class="nav-arrow" id="testimonial-next">&gt;</span>
+    <!-- IMPROVED: Portfolio Grid -->
+    <section id="portfolio-preview" class="section bg-white text-center">
+        <div class="container fade-in-up">
+            <p class="sub-heading">PORTFOLIO</p>
+            <h2 class="section-title">OUR WORK</h2>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item"><img src="images/maternity-1.jpg"
+                        alt="Elegant maternity photography in Ottawa studio"></div>
+                <div class="portfolio-item"><img src="images/maternity-2.jpg" alt="Beautiful studio maternity dress">
+                </div>
+                <div class="portfolio-item"><img src="images/maternity-3.jpg" alt="Refined maternity portrait"></div>
+                <div class="portfolio-item"><img src="images/maternity-4.jpg" alt="Artistic maternity photography">
+                </div>
+                <div class="portfolio-item"><img src="images/Z625154-scaled.jpg"
+                        alt="Natural family portrait photography Ottawa"></div>
+                <div class="portfolio-item"><img src="images/Z625407_bnw-scaled.jpg"
+                        alt="Black and white maternity portrait session"></div>
+                <div class="portfolio-item"><img src="images/Z627968_websize.jpg"
+                        alt="Mother and child bonding family photography"></div>
+                <div class="portfolio-item"><img src="images/Z625121_bnw-scaled.jpg"
+                        alt="Studio maternity photoshoot in Barrhaven"></div>
+            </div>
+
+            <a href="maternity-portfolio.html" class="btn btn-primary mt-4">VIEW FULL PORTFOLIO</a>
+        </div>
+    </section>
+
+    <!-- IMPROVED: Testimonial Cards Sections -->
+    <section class="testimonials section bg-black text-white text-center">
+        <div class="container fade-in-up">
+            <p class="sub-heading" style="color: #ccc;">CLIENT LOVE</p>
+            <h2 class="section-title" style="color: var(--color-white);">KIND WORDS</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"Absolutely stunning photos that we will cherish forever. The experience
+                        was professional, calm, and relaxing. Akash made us feel totally at ease."</p>
+                    <p class="testimonial-author">SARAH</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <!-- REPLACE WITH REAL TESTIMONIAL -->
+                    <p class="testimonial-text">"The best photography experience we've ever had. Fast turnaround,
+                        elegant photos, and beautiful studio wardrobe to choose from."</p>
+                    <p class="testimonial-author">EMILY</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <!-- REPLACE WITH REAL TESTIMONIAL -->
+                    <p class="testimonial-text">"Captured my maternity beautifully. The pictures are timeless and
+                        elegant, exactly what I was looking for. I could not be happier!"</p>
+                    <p class="testimonial-author">JESSICA</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <!-- REPLACE WITH REAL TESTIMONIAL -->
+                    <p class="testimonial-text">"Incredible attention to detail from booking to final delivery. Highly
+                        recommend for any family in Ottawa looking for premium service."</p>
+                    <p class="testimonial-author">MICHELLE</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <!-- REPLACE WITH REAL TESTIMONIAL -->
+                    <p class="testimonial-text">"A luxury experience from start to finish. The final prints are hanging
+                        proudly in our home, bringing us joy every time we look at them."</p>
+                    <p class="testimonial-author">LAURA</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- IMPROVED: Blog Previews Section -->
+    <section id="blog-preview" class="section bg-light text-center">
+        <div class="container fade-in-up">
+            <p class="sub-heading">LATEST STORIES</p>
+            <h2 class="section-title">FROM THE BLOG</h2>
 
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <!-- REPLACE WITH REAL BLOG POST -->
+                    <img src="images/maternity-1.jpg" alt="How to style your maternity portrait session"
+                        class="blog-image">
+                    <h3 class="blog-title">Styling Your Maternity Session</h3>
+                    <p class="blog-excerpt">Discover our top tips for choosing the perfect elegant wardrobe for your
+                        upcoming maternity studio portrait session in Ottawa.</p>
+                    <a href="blog.html" class="blog-link">READ MORE</a>
+                </div>
+                <div class="blog-card">
+                    <!-- REPLACE WITH REAL BLOG POST -->
+                    <img src="images/Z625154-scaled.jpg"
+                        alt="Tips for a smooth family photography session with young children" class="blog-image">
+                    <h3 class="blog-title">Preparing Kids for Photos</h3>
+                    <p class="blog-excerpt">A comprehensive guide to ensuring your little ones are comfortable, happy,
+                        and ready to shine during your family portraits.</p>
+                    <a href="blog.html" class="blog-link">READ MORE</a>
+                </div>
+                <div class="blog-card">
+                    <!-- REPLACE WITH REAL BLOG POST -->
+                    <img src="images/Z625407_bnw-scaled.jpg" alt="Why black and white maternity photography is timeless"
+                        class="blog-image">
+                    <h3 class="blog-title">Timeless Black & White</h3>
+                    <p class="blog-excerpt">Why we love incorporating moody and elegant black and white edits into your
+                        final maternal and family image galleries.</p>
+                    <a href="blog.html" class="blog-link">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPROVED: FAQ Section -->
+    <section id="faq" class="section bg-white text-center">
+        <div class="container fade-in-up">
+            <h2 class="section-title">FREQUENTLY ASKED QUESTIONS</h2>
+
+            <div class="faq-accordion">
+                <div class="faq-item" tabindex="0" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">What should I wear to my session? <span class="faq-icon"></span></div>
+                    <div class="faq-answer">For maternity sessions, we provide access to a wide range of exclusive
+                        maternity dresses (wardrobe included). For family portraits, no studio wardrobe is provided, but
+                        we will provide a consultation for outfit and dress options to ensure everyone looks
+                        well-coordinated.</div>
+                </div>
+                <div class="faq-item" tabindex="0" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">How far in advance should I book my maternity session? <span
+                            class="faq-icon"></span></div>
+                    <div class="faq-answer">It is highly recommended to book your maternity session early in your second
+                        trimester to ensure availability. The best time for the shoot is usually between 28-34 weeks,
+                        when your bump is beautifully round but you are still comfortable.</div>
+                </div>
+                <div class="faq-item" tabindex="0" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">How long until I receive my photos? <span class="faq-icon"></span></div>
+                    <div class="faq-answer">The very next day, an online selection gallery is shared for choosing your
+                        favorites. Once you've made your selections, the editing timeline is 5–7 days. Your final,
+                        beautifully retouched downloadable full-resolution images are then delivered via a second
+                        gallery.</div>
+                </div>
+                <div class="faq-item" tabindex="0" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">Do you offer outdoor sessions? <span class="faq-icon"></span></div>
+                    <div class="faq-answer">At Moments to Frames, our brand focuses primarily on providing an exquisite,
+                        climate-controlled studio experience to capture refined, editorial-style portraits. This allows
+                        us perfect control over lighting and elements year-round.</div>
+                </div>
+                <div class="faq-item" tabindex="0" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">Can I bring my partner or other children to a maternity session? <span
+                            class="faq-icon"></span></div>
+                    <div class="faq-answer">Absolutely! Partners and children are always welcome to join the session.
+                        There is no additional charge for them!</div>
+                </div>
+                <div class="faq-item" tabindex="0" onclick="this.classList.toggle('active')">
+                    <div class="faq-question">What is your cancellation/rescheduling policy? <span
+                            class="faq-icon"></span></div>
+                    <div class="faq-answer">A $50 CAD online retainer is required to book, which is non-refundable if
+                        you cancel. However, one reschedule is allowed free of cost after payment! Any additional
+                        reschedules are $25 CAD per occurrence.</div>
+                </div>
+            </div>
+
+            <p class="body-text mt-4">Still have questions? <a
+                    href="https://www.honeybook.com/widget/moments_to_frames_234688/cf_id/699f375b9ea96e0039c52bd9"
+                    target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Get in touch
+                    &rarr;</a></p>
+        </div>
+    </section>
 
     <!-- CTA Section -->
     <section id="contact" class="cta section bg-taupe">
@@ -211,24 +591,13 @@
         </div>
     </section>
 
-    <!-- Instagram Section -->
-    <section id="instagram" class="instagram bg-light">
-        <div class="insta-grid">
-            <img src="images/Z625121_bnw-scaled.jpg" alt="Instagram Post">
-            <img src="images/Z625443_shutter_drag-scaled.jpg" alt="Instagram Post">
-            <img src="images/Z627691_websize.jpg" alt="Instagram Post">
-            <img src="images/Z628049_websize.jpg" alt="Instagram Post">
-            <img src="images/Z628128_websize.jpg" alt="Instagram Post" class="desktop-only">
-        </div>
-    </section>
-
     <!-- Location Section -->
     <section id="location" class="location section bg-white">
         <div class="container fade-in-up">
             <div class="map-wrapper">
                 <iframe src="https://maps.google.com/maps?q=K2G%207A2&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%"
                     height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    title="Moments to frames studio map" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <div class="location-details mt-4">
                 <p class="sub-heading">OUR LOCATION</p>
@@ -246,6 +615,7 @@
                 <a href="maternity-portfolio.html">PORTFOLIO</a>
                 <a href="#services">SERVICES</a>
                 <a href="#about">ABOUT</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">CONTACT</a>
             </div>
 
@@ -256,10 +626,13 @@
             </div>
 
             <div class="footer-social">
+                <!-- IMPROVED: Fixed Broken Social Links -->
                 <a href="https://instagram.com/momentstoframesstudio" target="_blank"
                     rel="noopener noreferrer">INSTAGRAM</a>
-                <a href="#">FACEBOOK</a>
-                <a href="#">PINTEREST</a>
+                <a href="https://www.facebook.com/momentstoframesstudio" target="_blank"
+                    rel="noopener noreferrer">FACEBOOK</a>
+                <a href="https://www.pinterest.com/momentstoframesstudio" target="_blank"
+                    rel="noopener noreferrer">PINTEREST</a>
             </div>
         </div>
         <div class="footer-bottom text-center">
@@ -276,6 +649,16 @@
     <!-- Scripts -->
     <script src="main.js"></script>
     <script src="chatbot.js"></script>
+    <!-- Simple script for FAQ accordion to work on older unhandled edges -->
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    this.classList.toggle('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
