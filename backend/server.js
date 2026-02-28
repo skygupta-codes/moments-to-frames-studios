@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 require('dotenv').config();
-const { GoogleGenAI } = require('@google/genai');
+const { OpenAI } = require('openai');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -20,19 +20,19 @@ app.use(express.json());
 // Serve static frontend files from the "public" directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Safely initialize Gemini Instance so it doesn't crash on boot if Env Var is missing on Hostinger
+// Safely initialize OpenAI Instance so it doesn't crash on boot if Env Var is missing on Hostinger
 let ai = null;
 try {
-    if (process.env.GEMINI_API_KEY) {
-        ai = new GoogleGenAI({
-            apiKey: process.env.GEMINI_API_KEY,
+    if (process.env.OPENAI_API_KEY) {
+        ai = new OpenAI({
+            apiKey: process.env.OPENAI_API_KEY,
         });
-        console.log("Gemini API initialized successfully.");
+        console.log("OpenAI API initialized successfully.");
     } else {
-        console.warn("WARNING: GEMINI_API_KEY is missing. Chatbot will return 500 errors.");
+        console.warn("WARNING: OPENAI_API_KEY is missing. Chatbot will return 500 errors.");
     }
 } catch (err) {
-    console.error("Failed to initialize Gemini API on boot:", err.message);
+    console.error("Failed to initialize OpenAI API on boot:", err.message);
 }
 
 // System Prompt based on chatinstruction.md rules
@@ -89,7 +89,7 @@ IMPORTANT: When the user asks about booking, availability, or pricing, you MUST 
 app.post('/api/chat', async (req, res) => {
     try {
         if (!ai) {
-            console.error("Chat API called but Gemini AI is not initialized (missing API key).");
+            console.error("Chat API called but OpenAI AI is not initialized (missing API key).");
             return res.status(500).json({ error: "Chatbot is temporarily offline. Please contact the studio directly." });
         }
 
@@ -99,36 +99,37 @@ app.post('/api/chat', async (req, res) => {
             return res.status(400).json({ error: "Message is required." });
         }
 
-        // Map OpenAI-style roles (user/assistant) from frontend to Gemini-style roles (user/model)
-        const geminiHistory = conversationHistory.map(msg => ({
-            role: msg.role === 'assistant' ? 'model' : 'user',
-            parts: [{ text: msg.content }]
+        // Map frontend chat history directly to OpenAI schema format
+        const openaiHistory = conversationHistory.map(msg => ({
+            role: msg.role === 'assistant' ? 'assistant' : 'user',
+            content: msg.content
         }));
 
         // The current user message
         const currentMessage = {
             role: 'user',
-            parts: [{ text: message }]
+            content: message
         };
 
-        const finalContents = [...geminiHistory, currentMessage];
+        const finalContents = [
+            { role: 'system', content: SYSTEM_PROMPT },
+            ...openaiHistory, 
+            currentMessage
+        ];
 
-        const response = await ai.models.generateContent({
-            model: "gemini-2.5-flash",
-            contents: finalContents,
-            config: {
-                systemInstruction: SYSTEM_PROMPT,
-                temperature: 0.6,
-                maxOutputTokens: 300,
-            }
+        const response = await ai.chat.completions.create({
+            model: "gpt-4o-mini", // Cost-effective matching Gemini Flash speed
+            messages: finalContents,
+            temperature: 0.6,
+            max_tokens: 300,
         });
 
-        const reply = response.text;
+        const reply = response.choices[0].message.content;
 
         res.json({ reply });
 
     } catch (error) {
-        console.error("Gemini Error:", error);
+        console.error("OpenAI Error:", error);
         res.status(500).json({ error: "Failed to communicate with AI Client Concierge." });
     }
 });
