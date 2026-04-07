@@ -206,4 +206,37 @@ document.addEventListener('DOMContentLoaded', () => {
             resetAutoSlide(); // Pause timer on manual interaction
         });
     }
+
+    // --- Portfolio Tabs ---
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    if (tabBtns.length > 0 && tabContents.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabBtns.forEach(b => b.classList.remove('active'));
+                
+                // Hide all tab contents
+                tabContents.forEach(c => {
+                    c.style.display = 'none';
+                    c.classList.remove('active');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const targetId = btn.getAttribute('data-tab');
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.style.display = 'block';
+                    // slight delay to allow display block to apply before adding class for animation
+                    setTimeout(() => {
+                        targetContent.classList.add('active');
+                    }, 10);
+                }
+            });
+        });
+    }
 });
